@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>{{title }}</title>
+</head>
+<body>
+    <h1>{{message}}</h1>
+    <form method="post" >
+        <input type="text" name="username" value="{{user.username}}"> <br><br>
+        {% if (error.username) %}
+            <p> {{error.username.msg}} </p>
+        {% endif %}
+        <input type="password" name="password" value="{{user.password}}"> <br><br>
+        
+        <input type="password" name="cpassword"> <br><br>
+        {% if (error.cpassword) %}
+        <p> {{error.cpassword.msg}} </p>
+        {% endif %}
+        <input type="submit" name="submit"  value="Submit" >
+    </form>    
+</body>
+</html>
